@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from flask import Flask, request
+from .func import *
 
-# Create your views here.
 def index(request):
     print(request.POST)
     return render(request, "index.html")
@@ -24,6 +23,8 @@ def result(request):
             'symptoms': symptoms_array
         }
         print(new_object)
+
+        print(predictions(new_object))
         return render(request,"result.html")
 
 
