@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 *{
-    
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
 body{
   /* background: #fec107; */
   background-image: -webkit-linear-gradient(65deg, #1FAB89 50%, #9DF3C4 50%);
@@ -203,3 +203,4 @@ body{
     /* background-color: #fec107; */
     border: 0px;
 }
+
