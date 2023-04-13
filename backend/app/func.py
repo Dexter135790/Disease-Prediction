@@ -1,7 +1,4 @@
 import pickle
-# from my_model.pkl import *
-# import sys
-# sys.path.insert(1,'C:\VScode\Disease-Prediction\ML\my_model.pkl')
 
 condition ={
     "itching": 0,
