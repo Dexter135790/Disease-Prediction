@@ -26,7 +26,3 @@ def result(request):
 
         print(predictions(new_object))
         return render(request,"result.html")
-
-
-
-

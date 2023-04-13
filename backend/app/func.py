@@ -1,7 +1,7 @@
 import pickle
-from .ML.my_model.pkl import *
-import sys
-sys.path.insert(1,'C:\VScode\Disease-Prediction\ML\my_model.pkl')
+# from my_model.pkl import *
+# import sys
+# sys.path.insert(1,'C:\VScode\Disease-Prediction\ML\my_model.pkl')
 
 condition ={
     "itching": 0,
@@ -172,7 +172,7 @@ def predictions(obj):
     X_test = [arr]
     print(X_test)
     # Load the saved model from the pickle file
-    with open('my_model.pkl', 'rb') as f:
+    with open('static/my_model.pkl', 'rb') as f:
         loaded_model = pickle.load(f)
 
     # Use the loaded model for prediction
