@@ -25,7 +25,7 @@ def result(request):
             'symptoms': symptoms_array
         }
         # print(new_object)
-        a=predictions(new_object)
+        a=predictions(new_object)[0]
         with open('static/symptom_Description.csv', mode='r') as csv_file:
 
             csv_reader = csv.reader(csv_file)
