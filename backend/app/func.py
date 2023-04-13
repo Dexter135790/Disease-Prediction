@@ -170,6 +170,7 @@ def predictions(obj):
     arr = np.array(arr)
     X_test = arr.reshape(1,-1)
     print(X_test)
+    
     # Load the saved model from the pickle file
     with open('static/my_model.pkl', 'rb') as f:
         loaded_model = pickle.load(f)
