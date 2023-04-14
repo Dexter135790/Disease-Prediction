@@ -1,28 +1,7 @@
 import pickle
 import numpy as np
 
-condition={}
-
-def age(age):
-    if (int(age)<=20):
-        condition["Age(1-20)"]=1
-    elif (int(age)<=40):
-        condition["Age(21-40)"]=1
-    else:
-        condition["Age(40-above)"]=1
-
-def gender(gender):
-    if (gender=="Male"):
-        condition["Male"]=1
-    else:
-        condition["Female"]=1
-
-def symp(arr):
-    for i in arr:
-        condition[i]=1
-
-def con(obj):
-    condition ={
+condition ={
         "itching": 0,
         "Male": 0,
         "Female": 0,
@@ -160,6 +139,26 @@ def con(obj):
         "red_sore_around_nose": 0,
         "yellow_crust_ooze": 0,
     }
+
+def age(age):
+    if (int(age)<=20):
+        condition["Age(1-20)"]=1
+    elif (int(age)<=40):
+        condition["Age(21-40)"]=1
+    else:
+        condition["Age(40-above)"]=1
+
+def gender(gender):
+    if (gender=="Male"):
+        condition["Male"]=1
+    else:
+        condition["Female"]=1
+
+def symp(arr):
+    for i in arr:
+        condition[i]=1
+
+def con(obj):
     age(obj["age"])
     gender(obj["gender"])
     symp(obj["symptoms"])
