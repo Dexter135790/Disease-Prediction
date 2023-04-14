@@ -24,7 +24,7 @@ def result(request):
             'gender': obj['gender'],
             'symptoms': symptoms_array
         }
-        # print(new_object)
+        
         a=predictions(new_object)[0]
         with open('static/symptom_Description.csv', mode='r') as csv_file:
 
@@ -32,9 +32,9 @@ def result(request):
 
             for row in csv_reader:
 
-                 if a in row:
+                if a in row:
 
-                     desired_value = row[1]  
+                    desired_value = row[1]  
             print(predictions(new_object))
             print(desired_value)
 
@@ -45,11 +45,6 @@ def result(request):
             csv_reader=csv.reader(csv_file)
 
             for row in csv_reader:
-
-                    if a in row:
-
-
-                        desired_value2="1."+row[1]+"\n"+"2."+row[2]+"\n"+"3."+row[3]+"\n"+"4."+row[4]
-            prevention=desired_value2
-
-        return render(request,"result.html",{'description':description,'a':a,'prevention':prevention})
+                    if a in row[0]:
+                        dv=[row[1],row[2],row[3],row[4]]
+        return render(request,"result.html",{'a':a,'description':description,'d1':dv[0],'d2':dv[1],'d3':dv[2],'d4':dv[3]})
