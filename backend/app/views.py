@@ -235,4 +235,4 @@ def result(request):
             for row in csv_reader:
                     if a in row[0]:
                         dv=[row[1],row[2],row[3],row[4]]
-        return render(request,"result.html",{'a':a,'description':description,'d1':dv[0],'d2':dv[1],'d3':dv[2],'d4':dv[3]})
+    return render(request,"result.html",{'a':a,'description':description,'d1':dv[0],'d2':dv[1],'d3':dv[2],'d4':dv[3]})
